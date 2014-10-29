@@ -1,0 +1,7 @@
+{
+  "name": "serLCD",
+  "author": "Adam Fishman <adam.fishman@gmail.com>",
+  "license": "none",
+  "version": "0.9.0",
+  "description": "A port of serLCD arduino driver to spark core, to drive serial LCD display"
+}
