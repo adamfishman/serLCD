@@ -26,11 +26,12 @@
 
 //	PUBLIC FUNCTIONS
 
-// Contstructor
+// Constructor
 // defaults to 16x2 display
-serLCD::serLCD() : SoftwareSerial(pin, pin){
+serLCD::serLCD()(){
 	// pinMode(pin, OUTPUT);
 	Serial1.begin(9600);
+	delay(500);
 	_numlines = LCD_2LINE;
 	_numchars = LCD_16CHAR;
 	_rowoffset = 0;
