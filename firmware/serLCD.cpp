@@ -164,7 +164,7 @@ void serLCD::setCursor(int row, int col){
 
 // Creates custom characters 8 char limit
 // Input values start with 1
-void serLCD::createChar(int location, uint8_t charmap[]){
+void serLCD::createChar(int location, byte charmap[]){
 	location -= 1;
 	location &= 0x07;
   for (int i=0; i<8; i++){
@@ -190,12 +190,12 @@ void serLCD::println(String line) {
 // PRIVATE FUNCTIONS
 
 // Functions for sending the special command values
-void serLCD::command(uint8_t value){
+void serLCD::command(byte value){
 	Serial1.write(0xFE);
 	Serial1.write(value);
 	delay(5);
 }
-void serLCD::specialCommand(uint8_t value){
+void serLCD::specialCommand(byte value){
 	Serial1.write(0x7C);
 	Serial1.write(value);
 	delay(5);
