@@ -56,7 +56,7 @@
 #define LCD_SET16CHAR		0x04
 #define LCD_SET20CHAR		0x03
 
-class serLCD : public SoftwareSerial {
+class serLCD {
 public:
 	serLCD (int pin);
 
