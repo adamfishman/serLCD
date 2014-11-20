@@ -28,7 +28,7 @@
 
 // Constructor
 // defaults to 16x2 display
-serLCD::serLCD()(){
+serLCD::serLCD()
 	// pinMode(pin, OUTPUT);
 	Serial1.begin(9600);
 	delay(500);
