@@ -83,7 +83,7 @@ public:
 	void autoscroll();
 	void noAutoscroll();
 
-	void createChar(int, uint8_t[]);
+	void createChar(int, byte[]);
 	void printCustomChar(int);
 	
 	// from SoftwareSerial
@@ -91,15 +91,15 @@ public:
 	void println(String);
 
 private:
-	void command(uint8_t);
-	void specialCommand(uint8_t);
+	void command(byte);
+	void specialCommand(byte);
 
-	uint8_t _displayfunction;
-	uint8_t _displaycontrol;
-	uint8_t _displaymode;
-	uint8_t _numlines;
-	uint8_t _numchars;
-	uint8_t _rowoffset;
+	byte _displayfunction;
+	byte _displaycontrol;
+	byte _displaymode;
+	byte _numlines;
+	byte _numchars;
+	byte _rowoffset;
 };
 
 #endif
