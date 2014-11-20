@@ -85,10 +85,14 @@ public:
 
 	void createChar(int, uint8_t[]);
 	void printCustomChar(int);
+	
+	// from SoftwareSerial
+	void print();
+	void println();
 
 private:
-	void command(uint8_t);
-	void specialCommand(uint8_t);
+	void command(String);
+	void specialCommand(Sstring);
 
 	uint8_t _displayfunction;
 	uint8_t _displaycontrol;
