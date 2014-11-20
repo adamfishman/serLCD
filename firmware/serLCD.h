@@ -87,12 +87,12 @@ public:
 	void printCustomChar(int);
 	
 	// from SoftwareSerial
-	void print();
-	void println();
+	void print(String);
+	void println(String);
 
 private:
-	void command(String);
-	void specialCommand(Sstring);
+	void command(uint8_t);
+	void specialCommand(uint8_t);
 
 	uint8_t _displayfunction;
 	uint8_t _displaycontrol;
