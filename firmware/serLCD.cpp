@@ -22,18 +22,15 @@
  always be found at http://arduiniana.org. -> NO LONGER NECESSARY. See V1.5 notes above
 */
 
-//#include <../NewSoftSerial/NewSoftSerial.h>
-
-#include <SoftwareSerial.h>
 #include "serLCD.h"
 
 //	PUBLIC FUNCTIONS
 
 // Contstructor
 // defaults to 16x2 display
-serLCD::serLCD(int pin) : SoftwareSerial(pin, pin){
-	pinMode(pin, OUTPUT);
-	begin(9600);
+serLCD::serLCD() : SoftwareSerial(pin, pin){
+	// pinMode(pin, OUTPUT);
+	Serial1.begin(9600);
 	_numlines = LCD_2LINE;
 	_numchars = LCD_16CHAR;
 	_rowoffset = 0;
@@ -171,26 +168,26 @@ void serLCD::createChar(int location, uint8_t charmap[]){
 	location &= 0x07;
   for (int i=0; i<8; i++){
     command(LCD_SETCGRAMADDR | (location << 3) | i);
-    write(charmap[i]);
+    Serial1.write(charmap[i]);
   }
 }
 
 // Prints custom character
 // Input values start with 1
 void serLCD::printCustomChar(int num){
-	write((num - 1));
+	Serial1.write((num - 1));
 }
 
 // PRIVATE FUNCTIONS
 
 // Functions for sending the special command values
 void serLCD::command(uint8_t value){
-	write(0xFE);
-	write(value);
+	Serial1.write(0xFE);
+	Serial1.write(value);
 	delay(5);
 }
 void serLCD::specialCommand(uint8_t value){
-	write(0x7C);
-	write(value);
+	Serial1.write(0x7C);
+	Serial1.write(value);
 	delay(5);
 }
