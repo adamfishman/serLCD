@@ -179,6 +179,14 @@ void serLCD::printCustomChar(int num){
 	Serial1.write((num - 1));
 }
 
+// from SoftwareSerial
+void print(String line) {
+	Serial.print(line);
+}
+void println(String line) {
+	Serial.println(line);
+}
+
 // PRIVATE FUNCTIONS
 
 // Functions for sending the special command values
