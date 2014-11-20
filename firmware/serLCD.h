@@ -58,7 +58,7 @@
 
 class serLCD {
 public:
-	serLCD (int pin);
+	serLCD ();
 
 	void clear();
 	void clearLine(int);
