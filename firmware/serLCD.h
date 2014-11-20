@@ -22,8 +22,8 @@
 #ifndef serLCD_h
 #define serLCD_h
 
-#include "Arduino.h"       // for delayMicroseconds,digitalPinToBitMask, etc
-#include "SoftwareSerial.h"
+#include <Arduino.h>      // for delayMicroseconds,digitalPinToBitMask, etc
+#include <SoftwareSerial.h>
 
 // Commands
 #define LCD_BACKLIGHT		0x80
