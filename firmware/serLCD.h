@@ -22,6 +22,8 @@
 #ifndef serLCD_h
 #define serLCD_h
 
+#include "application.h"
+
 // Commands
 #define LCD_BACKLIGHT		0x80
 #define LCD_CLEARDISPLAY	0x01
