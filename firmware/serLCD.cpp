@@ -180,10 +180,10 @@ void serLCD::printCustomChar(int num){
 
 // from SoftwareSerial
 void serLCD::print(String line) {
-	Serial.print(line);
+	Serial1.print(line);
 }
 void serLCD::println(String line) {
-	Serial.println(line);
+	Serial1.println(line);
 }
 
 // PRIVATE FUNCTIONS
